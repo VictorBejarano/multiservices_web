@@ -73,7 +73,7 @@ nav{
    transition: 500ms;
  }
  .menu_ms_02{
-   padding-top: calc(0.5 * 83.19px);
+   padding-top: 84px;
    margin: 0;
    background-color: rgb(53,53,53);
    grid-template-columns: 100%;
@@ -82,7 +82,7 @@ nav{
    /* grid-row-gap: 50px; */
    /* display: none; */
    position: fixed;
-   height: calc(100% - 83.19px);
+   height: calc(100% - 83px);
    top: -100%;
    bottom: 0;
    right: 0;
@@ -94,7 +94,7 @@ nav{
  }
  .menu_ms_02.active{
    display: grid;
-   top: calc(83.19px / 2);
+   top: 0;
  }
  /* .menu_ms_01.active{
    background-color: rgb(53,53,53);
