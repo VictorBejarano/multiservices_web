@@ -13,7 +13,7 @@
       <figure class="log_ms_01">
         <img src="images/logo_1x.png" width="186" alt="Multiservices Logo"/>
       </figure>
-      <ul>
+      <ul class="menu_ms_02" id="menu_ms_02">
         <li>
           <a href="#"><b>Inicio</b></a>
         </li>
@@ -43,5 +43,24 @@
         <img src="images/fondotemporal.jpeg" alt="fondotemporal">
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script type="text/javascript">
+      var consulta = window.matchMedia('(max-width:500px)');
+      // consulta.addListener(mediaQuery);
+      var $menu = document.getElementById('menu_ms_01');
+      var $menu2 = document.getElementById('menu_ms_02');
+      function showMenu(){
+        $menu.classList.add('active');
+        $menu2.classList.add('active');
+      };
+      function hideMenu(){
+        $menu.classList.remove('active');
+        $menu2.classList.remove('active');
+      };
+      var $body = document.body;
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight', showMenu);
+    </script>
   </body>
 </html>

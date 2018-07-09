@@ -18,7 +18,7 @@ nav{
   grid-column-gap: 25px;
   grid-template-columns: 190px 60%;
 }
-.menu_ms_01 ul{
+.menu_ms_02{
   padding: 0px;
   display: grid;
   justify-content: center;
@@ -57,4 +57,47 @@ nav{
 }
 @media screen and (max-width:640px)
 {
+ .menu_ms_01 {
+   background-color: rgb(3,3,3,0.8);
+   /* background: #FF3C58; */
+   /* position: fixed; */
+   /* left: -100%; */
+   /* top: 0; */
+   z-index: 3;
+   /* configura en que nivel esta de la pantalla */
+   bottom: 0;
+   right: 0;
+   /* display: flex; */
+   /* width: 100%; */
+   align-items: center;
+   transition: 500ms;
+ }
+ .menu_ms_02{
+   padding-top: calc(0.5 * 83.19px);
+   margin: 0;
+   background-color: rgb(53,53,53);
+   grid-template-columns: 100%;
+   z-index: -1;
+   /* grid-column-gap: 0; */
+   /* grid-row-gap: 50px; */
+   /* display: none; */
+   position: fixed;
+   height: calc(100% - 83.19px);
+   top: -100%;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   transition: 500ms;
+ }
+ .menu_ms_01.active{
+   background-color: rgb(53,53,53);
+ }
+ .menu_ms_02.active{
+   display: grid;
+   top: calc(83.19px / 2);
+ }
+ /* .menu_ms_01.active{
+   background-color: rgb(53,53,53);
+   position: fixed;
+ } */
 }
