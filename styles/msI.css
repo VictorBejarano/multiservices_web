@@ -1,0 +1,103 @@
+*{
+  border: 1px solid red;
+}
+body{
+  margin: 0px;
+}
+nav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgba(3,3,3,0.8);
+  width: 100%;
+  text-align: center;
+}
+.menu_ms_01 {
+  display: grid;
+  justify-content: center;
+  grid-column-gap: 25px;
+  grid-template-columns: 190px 60%;
+}
+.menu_ms_02{
+  padding: 0px;
+  display: grid;
+  justify-content: center;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto auto;
+}
+.menu_ms_01 li{
+  display: grid;
+  align-content: center;
+}
+.log_ms_01{
+  margin: 0px;
+  display: grid;
+  align-content: center;
+}
+.menu_ms_01 a{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+/* ---------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------- */
+@media screen and (max-width:800px)
+{
+  /* nav{
+    height: auto;
+  } */
+  .menu_ms_01 {
+    grid-template-columns: 100%;
+  }
+  .log_ms_01{
+    justify-content: center;
+  }
+
+}
+@media screen and (max-width:640px)
+{
+ .menu_ms_01 {
+   background-color: rgb(3,3,3,0.8);
+   /* background: #FF3C58; */
+   /* position: fixed; */
+   /* left: -100%; */
+   /* top: 0; */
+   z-index: 3;
+   /* configura en que nivel esta de la pantalla */
+   bottom: 0;
+   right: 0;
+   /* display: flex; */
+   /* width: 100%; */
+   align-items: center;
+   transition: 500ms;
+ }
+ .menu_ms_02{
+   padding-top: calc(0.5 * 83.19px);
+   margin: 0;
+   background-color: rgb(53,53,53);
+   grid-template-columns: 100%;
+   z-index: -1;
+   /* grid-column-gap: 0; */
+   /* grid-row-gap: 50px; */
+   /* display: none; */
+   position: fixed;
+   height: calc(100% - 83.19px);
+   top: -100%;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   transition: 500ms;
+ }
+ .menu_ms_01.active{
+   background-color: rgb(53,53,53);
+ }
+ .menu_ms_02.active{
+   display: grid;
+   top: calc(83.19px / 2);
+ }
+ /* .menu_ms_01.active{
+   background-color: rgb(53,53,53);
+   position: fixed;
+ } */
+}

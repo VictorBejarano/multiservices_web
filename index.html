@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Multiservices INFAS</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles/msI.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
+  </head>
+  <body>
+    <!-- <header> -->
+    <nav class="menu_ms_01" id="menu_ms_01">
+      <figure class="log_ms_01">
+        <img src="images/logo_1x.png" width="186" alt="Multiservices Logo"/>
+      </figure>
+      <ul class="menu_ms_02" id="menu_ms_02">
+        <li>
+          <a href="#"><b>Inicio</b></a>
+        </li>
+        <li>
+          <a href="#"><b>Producto y Servicios</b></a>
+        </li>
+        <li>
+          <a href="#"><b>Nuestra Empresa</b></a>
+        </li>
+        <li>
+          <a href="#"><b>Contactenos</b></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- </header> -->
+    <main>
+      <section>
+        <img src="images/fondotemporal.jpeg" alt="fondotemporal">
+      </section>
+      <section>
+        <img src="images/fondotemporal.jpeg" alt="fondotemporal">
+      </section>
+      <section>
+        <img src="images/fondotemporal.jpeg" alt="fondotemporal">
+      </section>
+      <section>
+        <img src="images/fondotemporal.jpeg" alt="fondotemporal">
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script type="text/javascript">
+      var consulta = window.matchMedia('(max-width:500px)');
+      // consulta.addListener(mediaQuery);
+      var $menu = document.getElementById('menu_ms_01');
+      var $menu2 = document.getElementById('menu_ms_02');
+      function showMenu(){
+        $menu.classList.add('active');
+        $menu2.classList.add('active');
+      };
+      function hideMenu(){
+        $menu.classList.remove('active');
+        $menu2.classList.remove('active');
+      };
+      var $body = document.body;
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight', showMenu);
+    </script>
+  </body>
+</html>
