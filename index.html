@@ -9,6 +9,7 @@
   </head>
   <body>
     <!-- <header> -->
+    <span class="bmenu_ms_01" id="bmenu_ms_01"></span>
     <nav class="menu_ms_01" id="menu_ms_01">
       <figure class="log_ms_01">
         <img src="images/logo_1x.png" width="186" alt="Multiservices Logo"/>
@@ -28,6 +29,7 @@
         </li>
       </ul>
       <div class="rombos_ms_01"></div>
+      <div class="fAux_ms_01"></div>
 
     </nav>
     <!-- </header> -->
@@ -48,9 +50,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script type="text/javascript">
       var consulta = window.matchMedia('(max-width:500px)');
-      // consulta.addListener(mediaQuery);
+      consulta.addListener(mediaQuery);
+      var $bmenu_ms_01 = document.getElementById('bmenu_ms_01');
       var $menu = document.getElementById('menu_ms_01');
       var $menu2 = document.getElementById('menu_ms_02');
+      function toggleMenu(){
+        $menu.classList.toggle('active');
+        $menu2.classList.toggle('active');
+      };
       function showMenu(){
         $menu.classList.add('active');
         $menu2.classList.add('active');
@@ -59,6 +66,18 @@
         $menu.classList.remove('active');
         $menu2.classList.remove('active');
       };
+      function mediaQuery() {
+        if(consulta.matches){
+          console.log('se cumplio');
+          // $bmenu_ms_01.addEventListener('touchstart', toggleMenu);
+          $bmenu_ms_01.addEventListener('click', toggleMenu);
+        }else{
+          // $bmenu_ms_01.removeEventListener('touchstart', toggleMenu);
+          $bmenu_ms_01.removeEventListener('click', toggleMenu);
+          console.log('No se cumplio');
+        }
+      }
+      mediaQuery();
       var $body = document.body;
       var gestos = new Hammer($body);
       gestos.on('swipeleft', hideMenu);
