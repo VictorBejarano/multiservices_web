@@ -1,6 +1,11 @@
-/* *{
-  border: 1px solid red;
-} */
+*{
+  /* border: 1px solid red; */
+  /* background-color: black; */
+}
+main img{
+  background-color: black;
+  width: 100%;
+}
 body{
   margin: 0px;
 }
@@ -9,16 +14,34 @@ nav{
   position: sticky;
   top: 0;
   background-color: rgba(3,3,3,0.8);
+  /* background-image: url('../images/Rombos.png'); */
+  background-position: center;
+  background-size: auto 200px;
+  /* background-repeat: no-repeat; */
+  /* background-color: rgba(3,3,3,0.8); */
   width: 100%;
   text-align: center;
 }
+.rombos_ms_01{
+  position: fixed;
+  width: 100%;
+  height: 200px;
+  top: -80px;
+  z-index: -1;
+  background-image: url('../images/Rombos.png');
+  background-position: center;
+  background-size: auto 200px;
+}
+
 .menu_ms_01 {
   display: grid;
   justify-content: center;
   grid-column-gap: 25px;
-  grid-template-columns: 190px 60%;
+  grid-template-columns: 266px 60%;
 }
 .menu_ms_02{
+  grid-column-start: 2;
+  grid-column-end: 3;
   padding: 0px;
   display: grid;
   justify-content: center;
@@ -30,9 +53,15 @@ nav{
   align-content: center;
 }
 .log_ms_01{
+  padding: 60px 40px;
+  position: fixed;
+  top: -50px;
   margin: 0px;
-  display: grid;
   align-content: center;
+  background-image: url('../images/logo_rombos.png');
+  background-position: center;
+  background-size: auto 200px;
+  background-repeat: no-repeat;
 }
 .menu_ms_01 a{
   color: white;
@@ -49,8 +78,16 @@ nav{
   } */
   .menu_ms_01 {
     grid-template-columns: 100%;
+    grid-auto-rows: 100px auto;
+  }
+  .menu_ms_02{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-start: 3;
   }
   .log_ms_01{
+    width: 100%;
     justify-content: center;
   }
 
@@ -73,8 +110,8 @@ nav{
    transition: 1000ms;
  }
  .menu_ms_02{
-   padding-top: 100px;
-   padding-bottom: 20px;
+   padding-top: 150px;
+   padding-bottom: 380px;
    margin: 0;
    background-color: rgb(3,3,3,0.8);
    grid-template-columns: 100%;
@@ -84,8 +121,8 @@ nav{
    /* display: none; */
    font-size: 24px;
    position: fixed;
-   height: calc(100% - 83px);
-   top: -110%;
+   height: calc(100% - 253px);
+   top: calc(-110% - 120px);
    bottom: 0;
    right: 0;
    width: 100%;
