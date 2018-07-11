@@ -1,9 +1,8 @@
 *{
   /* border: 1px solid red; */
-  /* background-color: black; */
 }
 main img{
-  background-color: black;
+  /* background-color: black; */
   width: 100%;
 }
 body{
@@ -14,29 +13,28 @@ nav{
   position: sticky;
   top: 0;
   background-color: rgba(3,3,3,0.8);
-  /* background-image: url('../images/Rombos.png'); */
   background-position: center;
   background-size: auto 200px;
-  /* background-repeat: no-repeat; */
-  /* background-color: rgba(3,3,3,0.8); */
   width: 100%;
   text-align: center;
 }
 .rombos_ms_01{
   position: fixed;
   width: 100%;
-  height: 200px;
-  top: -80px;
+  height: 354px;
+  top: -157px;
   z-index: -1;
   background-image: url('../images/Rombos.png');
   background-position: center;
-  background-size: auto 200px;
+  background-size: auto 354px;
 }
-
+.fAux_ms_01{
+  display:none;
+}
 .menu_ms_01 {
   display: grid;
   justify-content: center;
-  grid-column-gap: 25px;
+  grid-column-gap: 48px;
   grid-template-columns: 266px 60%;
 }
 .menu_ms_02{
@@ -53,29 +51,64 @@ nav{
   align-content: center;
 }
 .log_ms_01{
-  padding: 60px 40px;
+
+  padding: 140px 140px;
   position: fixed;
-  top: -50px;
+  top: -110px;
   margin: 0px;
   align-content: center;
   background-image: url('../images/logo_rombos.png');
   background-position: center;
-  background-size: auto 200px;
+  background-size: auto 354px;
   background-repeat: no-repeat;
 }
 .menu_ms_01 a{
   color: white;
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
+  font-size: 28px;
+}
+.menu_ms_01 img{
+  width: auto;
+  height: 120px;
+}
+.bmenu_ms_01{
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+  cursor: pointer;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 3;
 }
 /* ---------------------------------------------------------------------- */
-
+@media screen and (max-width:1440px)
+{
+  .rombos_ms_01{
+    height: 200px;
+    top: -80px;
+    background-size: auto 200px;
+  }
+  .menu_ms_01 {
+    grid-column-gap: 25px;
+  }
+  .menu_ms_01 a{
+    font-size: 16px;
+  }
+  .log_ms_01{
+    top:  -50px;
+    padding: 60px 40px;
+    background-size: auto 200px;
+  }
+  .menu_ms_01 img{
+    width: 186px;
+    height: auto;
+  }
+}
 /* ---------------------------------------------------------------------- */
 @media screen and (max-width:800px)
 {
-  /* nav{
-    height: auto;
-  } */
   .menu_ms_01 {
     grid-template-columns: 100%;
     grid-auto-rows: 100px auto;
@@ -96,35 +129,24 @@ nav{
 {
  .menu_ms_01 {
    background-color: rgb(3,3,3,0.8);
-   /* background: #FF3C58; */
-   /* position: fixed; */
-   /* left: -100%; */
-   /* top: 0; */
    z-index: 3;
-   /* configura en que nivel esta de la pantalla */
    bottom: 0;
    right: 0;
-   /* display: flex; */
-   /* width: 100%; */
    align-items: center;
    transition: 1000ms;
  }
  .menu_ms_02{
    padding-top: 150px;
-   padding-bottom: 380px;
+   padding-bottom: 120px;
    margin: 0;
    background-color: rgb(3,3,3,0.8);
    grid-template-columns: 100%;
    z-index: -1;
-   /* grid-column-gap: 0; */
-   /* grid-row-gap: 50px; */
-   /* display: none; */
    font-size: 24px;
    position: fixed;
-   height: calc(100% - 253px);
-   top: calc(-110% - 120px);
+   height: calc(100% - 150px - 120px);
+   top: -110%;
    bottom: 0;
-   right: 0;
    width: 100%;
    transition: 1000ms;
  }
@@ -133,15 +155,22 @@ nav{
  }
  .menu_ms_02.active{
    background-color: rgb(53,53,53);
-   /* display: grid; */
    top: 0;
  }
  .log_ms_01{
    padding-left: 0px;
    padding-right: 0px;
  }
- /* .menu_ms_01.active{
-   background-color: rgb(53,53,53);
-   position: fixed;
- } */
+ .fAux_ms_01{
+   display: block;
+   position: -webkit-sticky;
+   position: sticky;
+   margin: 0;
+   width: 100%;
+   height: 100px;
+   z-index: -2;
+ }
+ .bmenu_ms_01{
+   z-index: 9999;
+ }
 }
