@@ -136,6 +136,10 @@ nav{
    /* display: grid; */
    top: 0;
  }
+ .log_ms_01{
+   padding-left: 0px;
+   padding-right: 0px;
+ }
  /* .menu_ms_01.active{
    background-color: rgb(53,53,53);
    position: fixed;
