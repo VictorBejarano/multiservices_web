@@ -2,7 +2,6 @@
   /* border: 1px solid red; */
 }
 main img{
-  /* background-color: black; */
   width: 100%;
 }
 body{
@@ -85,7 +84,6 @@ nav{
   z-index: 3;
   display: none;
 }
-/* ---------------------------------------------------------------------- */
 @media screen and (max-width:1440px)
 {
   .rombos_ms_01{
@@ -109,7 +107,6 @@ nav{
     height: auto;
   }
 }
-/* ---------------------------------------------------------------------- */
 @media screen and (max-width:800px)
 {
   .menu_ms_01 {
@@ -177,4 +174,9 @@ nav{
    z-index: 9999;
    display: block;
  }
+}
+@media screen and (orientation: landscape) and (max-width:640px){
+  .menu_ms_02{
+    grid-template-columns: auto auto auto auto;
+  }
 }

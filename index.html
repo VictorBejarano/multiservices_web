@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
   </head>
   <body>
-    <!-- <header> -->
     <span class="bmenu_ms_01" id="bmenu_ms_01"></span>
     <nav class="menu_ms_01" id="menu_ms_01">
       <figure class="log_ms_01">
@@ -30,9 +29,7 @@
       </ul>
       <div class="rombos_ms_01"></div>
       <div class="fAux_ms_01"></div>
-
     </nav>
-    <!-- </header> -->
     <main>
       <section>
         <img src="images/fondotemporal.jpeg" alt="fondotemporal">
@@ -69,10 +66,8 @@
       function mediaQuery() {
         if(consulta.matches){
           console.log('se cumplio');
-          // $bmenu_ms_01.addEventListener('touchstart', toggleMenu);
           $bmenu_ms_01.addEventListener('click', toggleMenu);
         }else{
-          // $bmenu_ms_01.removeEventListener('touchstart', toggleMenu);
           $bmenu_ms_01.removeEventListener('click', toggleMenu);
           console.log('No se cumplio');
         }
