@@ -86,12 +86,14 @@ nav{
   padding: 1vw;
   width: calc(100% - 2vw);
   height: calc(100vh - 4vw - 2vw);
+  justify-content: center;
+  align-items: center;
   /* background-color: yellow; */
   background-clip: content-box;
   display: grid;
-  grid-gap: 1vw;
-  grid-template-columns: 45vw auto;
-  grid-template-rows: auto auto auto;
+  grid-gap: 2vmin;
+  grid-template-columns: 45vmin 45vmin;
+  grid-template-rows: 35vmin 35vmin 10vmin;
 }
 footer p{
   margin: 0;
@@ -99,16 +101,18 @@ footer p{
 .contact_ms_01{
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 3vw 4vw 4vw 4vw;
-  grid-gap: 0.5vw;
-  padding: 3vw;
+  grid-template-rows: 5.5vmin 5.5vmin 5.5vmin 5.5vmin;
+  grid-gap: 0.5vmin;
+  padding: 3vmin;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+  align-items: center;
 }
 .contact_ms_02{
-  font-size: 2vw;
+
+  font-size: 4vmin;
   font-weight: bold;
   color: gray;
   grid-column-start: 1;
@@ -137,13 +141,14 @@ footer p{
 .dir_ms_01{
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 3vw 4vw 3vw 5vw;
-  grid-gap: 0.5vw;
-  padding: 3vw;
+  grid-template-rows: 5vmin 5vmin 5vmin 5vmin;
+  grid-gap: 0.5vmin;
+  padding: 3vmin;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
+  align-items: center;
 }
 .dir_ms_02{
   grid-column-start: 1;
@@ -170,9 +175,9 @@ footer p{
 .sig_ms_01{
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto 5vw 5vw;
-  grid-gap: 0.5vw;
-  padding: 3vw;
+  grid-template-rows: auto 5vmin 5vmin;
+  grid-gap: 1vmin;
+  padding: 3vmin;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -193,7 +198,7 @@ footer p{
   grid-row-end: 4;
 }
 .contact_ms_03{
-  font-size: 2vw;
+  font-size: 4vmin;
   font-weight: bold;
   color: gray;
   grid-column-start: 1;
@@ -202,7 +207,7 @@ footer p{
   grid-row-end: 2;
 }
 .contact_ms_04{
-  font-size: 2vw;
+  font-size: 4vmin;
   font-weight: bold;
   color: gray;
   grid-column-start: 1;
@@ -211,7 +216,7 @@ footer p{
   grid-row-end: 4;
 }
 .contact_ms_05{
-  font-size: 3vw;
+  font-size: 4vmin;
   font-weight: bold;
   color: gray;
   grid-column-start: 1;
@@ -220,11 +225,12 @@ footer p{
   grid-row-end: 3;
 }
 .txt_ms_01{
+  font-size: 2vmin;
   text-decoration: none;
   color: gray;
 }
 .ico_ms_01{
-  width: 5vw;
+  width: 5vmin;
 }
 .fb_ms_01{
   display: grid;
