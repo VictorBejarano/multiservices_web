@@ -1,5 +1,5 @@
 *{
-  /* border: 1px solid red; */
+  /* border: 0.03vw solid red; */
 }
 main img{
   width: 100%;
@@ -13,36 +13,34 @@ nav{
   top: 0;
   background-color: rgba(3,3,3,0.8);
   background-position: center;
-  background-size: auto 200px;
   width: 100%;
+  height: 4vw;
   text-align: center;
 }
 .rombos_ms_01{
   position: fixed;
   width: 100%;
-  height: 354px;
-  top: -157px;
+  height: 12vw;
+  top: -6vw;
   z-index: -1;
   background-image: url('../images/Rombos.png');
   background-position: center;
-  background-size: auto 354px;
-}
-.fAux_ms_01{
-  display:none;
+  background-size: auto 12vw;
 }
 .menu_ms_01 {
   display: grid;
   justify-content: center;
-  grid-column-gap: 48px;
-  grid-template-columns: 266px 60%;
+  grid-column-gap: 2vw;
+  grid-template-columns: 10vw 60vw;
 }
 .menu_ms_02{
+  margin: 1vw;
   grid-column-start: 2;
   grid-column-end: 3;
   padding: 0px;
   display: grid;
   justify-content: center;
-  grid-column-gap: 50px;
+  grid-column-gap: 2vw;
   grid-template-columns: auto auto auto auto;
 }
 .menu_ms_01 li{
@@ -50,101 +48,133 @@ nav{
   align-content: center;
 }
 .log_ms_01{
-
-  padding: 140px 140px;
+  padding: 5vw 5vw;
   position: fixed;
-  top: -110px;
+  top: -4vw;
   margin: 0px;
+  height: 6vw;
   align-content: center;
   background-image: url('../images/logo_rombos.png');
   background-position: center;
-  background-size: auto 354px;
+  background-size: auto 12vw;
   background-repeat: no-repeat;
 }
 .menu_ms_01 a{
   color: white;
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 1vw;
 }
 .menu_ms_01 img{
   width: auto;
-  height: 120px;
+  height: 5vw;
 }
 .bmenu_ms_01{
-  width: 50px;
-  height: 70px;
+  width: 5vw;
+  height: 6vw;
   background-image: url('../images/logo_inicio.png');
-  background-size: 50px auto;
+  background-size: 5vw auto;
   background-repeat: no-repeat;
   cursor: pointer;
   position: fixed;
-  left: 20px;
-  top: 20px;
+  left: 3vw;
+  top: 3vw  ;
   z-index: 3;
   display: none;
 }
-@media screen and (max-width:1440px)
+.ft_ms_01{
+  padding: 1vh;
+  width: calc(100% - 2vh);
+  height: 98vh;
+  background-color: yellow;
+  background-clip: content-box;
+}
+@media screen and (max-width:1024px)
 {
+  nav{
+      height: 6vw;
+  }
   .rombos_ms_01{
-    height: 200px;
-    top: -80px;
-    background-size: auto 200px;
+    height: 18vw;
+    top: -9vw;
+    background-size: auto 18vw;
   }
   .menu_ms_01 {
-    grid-column-gap: 25px;
+    grid-column-gap: 4vw;
+    grid-template-columns: 16vw 60vw;
   }
-  .menu_ms_01 a{
-    font-size: 16px;
+  .menu_ms_02{
+    grid-column-gap: 3vw;
   }
   .log_ms_01{
-    top:  -50px;
-    padding: 60px 40px;
-    background-size: auto 200px;
+    padding: 6vw 6vw;
+    top: -5vw;
+    height: 9vw;
+    background-size: auto 18vw;
+  }
+
+
+  .menu_ms_01 a{
+    font-size: 1.5vw;
   }
   .menu_ms_01 img{
-    width: 186px;
-    height: auto;
+    height: 7vw;
   }
 }
 @media screen and (max-width:800px)
 {
+  nav{
+      height: 24vw;
+  }
   .menu_ms_01 {
     grid-template-columns: 100%;
-    grid-auto-rows: 100px auto;
+    grid-auto-rows: 16vw 8vw;
+    /* border: 1px solid blue; */
   }
   .menu_ms_02{
-    grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 1;
     grid-row-start: 2;
-    grid-row-start: 3;
   }
   .log_ms_01{
     width: 100%;
+    top: -5vw;
+    height: 10vw;
+    background-size: auto 22vw;
+    padding-left: 0;
+    padding-right: 0;
     justify-content: center;
+  }
+  .menu_ms_01 a{
+    font-size: 2vw;
+  }
+  .menu_ms_01 img{
+    height: 9vw;
   }
 
 }
 @media screen and (max-width:640px)
 {
+  nav{
+      height: 12vw;
+  }
  .menu_ms_01 {
    background-color: rgb(3,3,3,0.8);
    z-index: 3;
    bottom: 0;
    right: 0;
    align-items: center;
-   transition: 1000ms;
  }
  .menu_ms_02{
-   padding-top: 150px;
-   padding-bottom: 120px;
+   padding-top: 30vw;
+   padding-bottom: 30vw;
    margin: 0;
    background-color: rgb(3,3,3,0.8);
    grid-template-columns: 100%;
    z-index: -1;
-   font-size: 24px;
    position: fixed;
-   height: calc(100% - 150px - 120px);
+   height: calc(100% - 30vw - 30vw);
    top: -110%;
    bottom: 0;
    width: 100%;
@@ -161,22 +191,19 @@ nav{
    padding-left: 0px;
    padding-right: 0px;
  }
- .fAux_ms_01{
-   display: block;
-   position: -webkit-sticky;
-   position: sticky;
-   margin: 0;
-   width: 100%;
-   height: 100px;
-   z-index: -2;
- }
  .bmenu_ms_01{
    z-index: 9999;
    display: block;
+ }
+ .menu_ms_01 a{
+   font-size: 4vw;
  }
 }
 @media screen and (orientation: landscape) and (max-width:640px){
   .menu_ms_02{
     grid-template-columns: auto auto auto auto;
+  }
+  .menu_ms_01 a{
+    font-size: 3vw;
   }
 }
