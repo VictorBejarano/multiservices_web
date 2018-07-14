@@ -90,7 +90,7 @@ nav{
   background-clip: content-box;
   display: grid;
   grid-gap: 1vw;
-  grid-template-columns: auto auto;
+  grid-template-columns: 45vw auto;
   grid-template-rows: auto auto auto;
 }
 footer p{
@@ -98,29 +98,81 @@ footer p{
 }
 .contact_ms_01{
   display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 3vw 4vw 4vw 4vw;
   grid-gap: 0.5vw;
-  padding: 2vw;
+  padding: 3vw;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
 }
-
-.dir_ms_01{
-  display: grid;
-  grid-gap: 0.5vw;
-  padding: 2vw;
+.contact_ms_02{
+  font-size: 2vw;
+  font-weight: bold;
+  color: gray;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.tel_ms_01{
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
+}
+.mov_ms_01{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.mail_ms_01{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.dir_ms_01{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 3vw 4vw 3vw 5vw;
+  grid-gap: 0.5vw;
+  padding: 3vw;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.dir_ms_02{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.gmap_ms_01{
+  display: grid;
+  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.wz_ms_01{
+  display: grid;
+  justify-content: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }
 .sig_ms_01{
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto 5vw 5vw;
   grid-gap: 0.5vw;
-  padding: 2vw;
+  padding: 3vw;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -140,10 +192,32 @@ footer p{
   grid-row-start: 3;
   grid-row-end: 4;
 }
-.contact_ms_02{
+.contact_ms_03{
+  font-size: 2vw;
+  font-weight: bold;
+  color: gray;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.contact_ms_04{
+  font-size: 2vw;
+  font-weight: bold;
+  color: gray;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.contact_ms_05{
   font-size: 3vw;
   font-weight: bold;
   color: gray;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 .txt_ms_01{
   text-decoration: none;
