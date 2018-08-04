@@ -1,0 +1,57 @@
+.bmenu_ms_01
+  display: none
+.menu_ms_01
+  width: 100%
+  position: fixed
+  height: 4vw
+  top: 0
+  background-color: rgba(0.3,0.3,0.3,0.8)
+  margin: 0
+  display: grid
+  grid-template-columns: logo_ms menu_ms
+  grid-template-rows: auto
+  img
+    width: auto
+    height: log_ms_h
+    z-index: -1
+  ul
+    margin 0
+    padding: 0
+    grid-column-start: 2
+    grid-column-end: 3
+    display: grid
+    grid-template-columns: auto auto auto auto
+    grid-template-rows: auto
+    grid-gap: 1vw
+    justify-content: center
+    align-items: center
+    li
+      display: grid
+    a
+      color white
+      text-decoration: none
+      font-size: Mfont_ms
+.log_ms_01
+  display: grid
+  position: fixed
+  margin: 0
+  padding: 0
+  width: romlog_ms_w
+  height: romlog_ms_h
+  top: -3.6vw
+  left: 8vw
+  background-image: url('../images/logo_rombos.png')
+  background-position: center
+  background-size: auto romlog_ms_h
+  background-repeat: no-repeat
+  justify-content: center
+  align-items: center
+  z-index: -2
+.rombos_ms_01
+  position: fixed
+  width: 100%
+  height: rombos_ms_h
+  top: rombos_ms_t
+  background-image: url('../images/Rombos.png')
+  background-size: auto rombos_ms_h
+  z-index: -3

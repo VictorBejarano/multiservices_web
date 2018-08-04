@@ -1,0 +1,479 @@
+@import "_variable.styl"
+
+*
+  // border: 0.03vw solid red
+  font-family: 'Open Sans', sans-serif
+body
+    margin: 0
+    display: grid
+    justify-content: center
+    align-items: center
+.bmenu_ms_01
+  display: none
+.menu_ms_01
+  width: 100%
+  position: fixed
+  height: 4vw
+  top: 0
+  background-color: rgba(0.3,0.3,0.3,0.8)
+  margin: 0
+  display: grid
+  grid-template-columns: logo_ms menu_ms
+  grid-template-rows: auto
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    height: 10vw
+    grid-template-columns: auto
+    grid-template-rows: 6vw 4vw
+  }
+  img
+    width: auto
+    height: log_ms_h
+    z-index: -1
+    @media screen and (max-width: rTAB_ms_w)
+    {
+      height: logTAB_ms_h
+    }
+  ul
+    margin 0
+    padding: 0
+    grid-column-start: 2
+    grid-column-end: 3
+    display: grid
+    grid-template-columns: auto auto auto auto
+    grid-template-rows: auto
+    grid-gap: 1vw
+    justify-content: center
+    align-items: center
+    li
+      display: grid
+    a
+      color white
+      text-decoration: none
+      font-size: 1.2vw
+      @media screen and (max-width: rTAB_ms_w)
+      {
+        font-size: 1.6vw
+      }
+    @media screen and (max-width: rTAB_ms_w)
+    {
+      grid-column-start: 1
+      grid-column-end: 2
+      grid-row-start: 2
+      grid-row-end: 3
+      grid-gap: 10vw
+    }
+.log_ms_01
+  display: grid
+  position: fixed
+  margin: 0
+  padding: 0
+  width: romlog_ms_w
+  height: romlog_ms_h
+  top: -3.6vw
+  left: 8vw
+  background-image: url('../images/logo_rombos.png')
+  background-position: center
+  background-size: auto romlog_ms_h
+  background-repeat: no-repeat
+  justify-content: center
+  align-items: center
+  z-index: -2
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    padding: 0
+    left: 0
+    width: 100%
+    height: romlogTAB_ms_h
+    background-size: auto romlogTAB_ms_h
+    top: -4.4vw
+  }
+
+.rombos_ms_01
+  position: fixed
+  width: 100%
+  height: rombos_ms_h
+  top: rombos_ms_t
+  background-image: url('../images/Rombos.png')
+  background-size: auto rombos_ms_h
+  z-index: -3
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    height: rombosTAB_ms_h
+    top: rombosTAB_ms_t
+    background-size: auto rombosTAB_ms_h
+  }
+main
+  section
+    background-color: lightblue
+    width: 100%
+    height: 100vh
+    @media screen and (max-width: rFullHD_ms_w)
+    {
+      width: 100vw
+    }
+.contact_us
+  padding: fpadd4k_ms
+  background-clip: content-box
+  width: r4k_ms_w - (2 * fpadd4k_ms)
+  height: r4k_ms_h - (2 * fpadd4k_ms)
+  display: grid
+  grid-template-columns: auto auto auto auto
+  grid-template-rows: auto (r4k_ms_w * 0.12) (r4k_ms_w * 0.155) (r4k_ms_w * 0.02) auto
+  justify-content: center
+  grid-gap: gap4k_ms
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  @media screen and (max-width: rFullHD_ms_w)
+  {
+    padding: fpaddFullHD_ms
+    width: rFullHD_ms_w - (2 * fpaddFullHD_ms) - 20px
+    height: rFullHD_ms_h - (2 * fpaddFullHD_ms)
+    grid-template-rows: auto (rFullHD_ms_w * 0.12) (rFullHD_ms_w * 0.155) (rFullHD_ms_w * 0.02) auto
+    grid-gap: gapFullHD_ms
+  }
+  @media screen and (max-width: rWXGA_ms_w)
+  {
+    padding: fpaddWXGA_ms
+    width: rWXGA_ms_w - (2 * fpaddWXGA_ms) - 20px
+    height: rWXGA_ms_h - (2 * fpaddWXGA_ms)
+    grid-template-rows: auto (rWXGA_ms_w * 0.12) (rWXGA_ms_w * 0.155) (rWXGA_ms_w * 0.02) auto
+    grid-gap: gapWXGA_ms
+  }
+  @media screen and (max-width: rHDTV_ms_w)
+  {
+    padding: fpaddHDTV_ms
+    width: rHDTV_ms_w - (2 * fpaddHDTV_ms) - 20px
+    height: rHDTV_ms_h - (2 * fpaddHDTV_ms)
+    grid-template-rows: auto (rHDTV_ms_w * 0.12) (rHDTV_ms_w * 0.155) (rHDTV_ms_w * 0.02) auto
+    grid-gap: gapHDTV_ms
+  }
+  @media screen and (max-width: rNTSC_ms_w)
+  {
+    padding: fpaddNTSC_ms
+    width: rNTSC_ms_w - (2 * fpaddNTSC_ms) - 20px
+    height: rNTSC_ms_h - (2 * fpaddNTSC_ms)
+    grid-template-rows: auto (rNTSC_ms_w * 0.12) (rNTSC_ms_w * 0.155) (rNTSC_ms_w * 0.02) auto
+    grid-gap: gapNTSC_ms
+  }
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    padding: fpaddTAB_ms
+    width: rTAB_ms_w - (2 * fpaddTAB_ms) - 20px
+    height: rTAB_ms_h - (2 * fpaddTAB_ms)
+    grid-template-rows: auto (rTAB_ms_w * 0.12) (rTAB_ms_w * 0.155) (rTAB_ms_w * 0.02) auto
+    grid-gap: gapTAB_ms
+  }
+.contact_ms_01
+  grid-column-start: 2
+  grid-column-end: 3
+  grid-row-start: 2
+  grid-row-end: 3
+  padding: r4k_ms_w * 0.01
+  display: grid
+  grid-template-columns: auto
+  grid-template-rows: fBFont4k_ms fFont4k_ms fFont4k_ms fFont4k_ms
+  align-content: center
+  align-items: center;
+  grid-gap: r4k_ms_w * 0.015
+
+  @media screen and (max-width: rFullHD_ms_w)
+  {
+    padding: rFullHD_ms_w * 0.01
+    grid-template-rows: fBFontFullHD_ms fFontFullHD_ms fFontFullHD_ms fFontFullHD_ms
+    grid-gap: rFullHD_ms_w * 0.015
+  }
+  @media screen and (max-width: rWXGA_ms_w)
+  {
+    padding: rWXGA_ms_w * 0.01
+    grid-template-rows: fBFontWXGA_ms fFontWXGA_ms fFontWXGA_ms fFontWXGA_ms
+    grid-gap: rWXGA_ms_w * 0.015
+  }
+  @media screen and (max-width: rHDTV_ms_w)
+  {
+    padding: rHDTV_ms_w * 0.01
+    grid-template-rows: fBFontHDTV_ms fFontHDTV_ms fFontHDTV_ms fFontHDTV_ms
+    grid-gap: rHDTV_ms_w * 0.015
+  }
+  @media screen and (max-width: rNTSC_ms_w)
+  {
+    padding: rNTSC_ms_w * 0.01
+    grid-template-rows: fBFontNTSC_ms fFontNTSC_ms fFontNTSC_ms fFontNTSC_ms
+    grid-gap: rNTSC_ms_w * 0.015
+  }
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    padding: rTAB_ms_w * 0.01
+    grid-template-rows: fBFontTAB_ms fFontTAB_ms fFontTAB_ms fFontTAB_ms
+    grid-gap: rTAB_ms_w * 0.015
+  }
+.dir_ms_01
+  grid-column-start: 2
+  grid-column-end: 3
+  grid-row-start: 3
+  grid-row-end: 4
+  padding: r4k_ms_w * 0.01
+  display: grid
+  align-content: center
+  align-items: center
+  grid-template-columns: auto auto
+  grid-template-rows: fBFont4k_ms fFont4k_ms fBFont4k_ms ico4k_ms_h
+  grid-row-gap: r4k_ms_w * 0.015
+  .contact_ms_03
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row-start: 1
+    grid-row-end: 2
+  .dir_ms_02
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row-start: 2
+    grid-row-end: 3
+  .contact_ms_04
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row-start: 3
+    grid-row-end: 4
+  .gmap_ms_01
+    grid-column-start: 1
+    grid-column-end: 2
+    grid-row-start: 4
+    grid-row-end: 5
+    display: grid
+    justify-content: center
+  .wz_ms_01
+    grid-column-start: 2
+    grid-column-end: 3
+    grid-row-start: 4
+    grid-row-end: 5
+    display: grid
+    justify-content: center
+
+  @media screen and (max-width: rFullHD_ms_w)
+  {
+    padding: rFullHD_ms_w * 0.01
+    grid-template-rows: fBFontFullHD_ms fFontFullHD_ms fBFontFullHD_ms icoFullHD_ms_h
+    grid-row-gap: rFullHD_ms_w * 0.015
+  }
+  @media screen and (max-width: rWXGA_ms_w)
+  {
+    padding: rWXGA_ms_w * 0.01
+    grid-template-rows: fBFontWXGA_ms fFontWXGA_ms fBFontWXGA_ms icoWXGA_ms_h
+    grid-row-gap: rWXGA_ms_w * 0.015
+  }
+  @media screen and (max-width: rHDTV_ms_w)
+  {
+    padding: rHDTV_ms_w * 0.01
+    grid-template-rows: fBFontHDTV_ms fFontHDTV_ms fBFontHDTV_ms icoHDTV_ms_h
+    grid-row-gap: rHDTV_ms_w * 0.015
+  }
+  @media screen and (max-width: rNTSC_ms_w)
+  {
+    padding: rNTSC_ms_w * 0.01
+    grid-template-rows: fBFontNTSC_ms fFontNTSC_ms fBFontNTSC_ms icoNTSC_ms_h
+    grid-row-gap: rNTSC_ms_w * 0.015
+  }
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    padding: rTAB_ms_w * 0.01
+    grid-template-rows: fBFontTAB_ms fFontTAB_ms fBFontTAB_ms icoTAB_ms_h
+    grid-row-gap: rTAB_ms_w * 0.015
+  }
+.hor_ms_01
+  grid-column-start: 3
+  grid-column-end: 4
+  grid-row-start: 2
+  grid-row-end: 3
+  padding: r4k_ms_w * 0.01
+  display: grid
+  grid-template-columns: auto
+  grid-template-rows: fBFont4k_ms fFont4k_ms fFont4k_ms
+  align-items: center
+  align-content: center
+  align-items: center;
+  grid-gap: r4k_ms_w * 0.015
+  @media screen and (max-width: rFullHD_ms_w)
+  {
+    padding: rFullHD_ms_w * 0.01
+    grid-template-rows: fBFontFullHD_ms fFontFullHD_ms fFontFullHD_ms
+    grid-gap: rFullHD_ms_w * 0.015
+  }
+  @media screen and (max-width: rWXGA_ms_w)
+  {
+    padding: rWXGA_ms_w * 0.01
+    grid-template-rows: fBFontWXGA_ms fFontWXGA_ms fFontWXGA_ms
+    grid-gap: rWXGA_ms_w * 0.015
+  }
+  @media screen and (max-width: rHDTV_ms_w)
+  {
+    padding: rHDTV_ms_w * 0.01
+    grid-template-rows: fBFontHDTV_ms fFontHDTV_ms fFontHDTV_ms
+    grid-gap: rHDTV_ms_w * 0.015
+  }
+  @media screen and (max-width: rNTSC_ms_w)
+  {
+    padding: rNTSC_ms_w * 0.01
+    grid-template-rows: fBFontNTSC_ms fFontNTSC_ms fFontNTSC_ms
+    grid-gap: rNTSC_ms_w * 0.015
+  }
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    padding: rTAB_ms_w * 0.01
+    grid-template-rows: fBFontTAB_ms fFontTAB_ms fFontTAB_ms
+    grid-gap: rTAB_ms_w * 0.015
+  }
+.sig_ms_01
+  grid-column-start: 3
+  grid-column-end: 4
+  grid-row-start: 3
+  grid-row-end: 4
+  padding: r4k_ms_w * 0.01
+  display: grid
+  align-items: center
+  align-content: center
+  grid-template-columns: auto auto auto
+  grid-template-rows: fBFont4k_ms ico4k_ms_h
+  grid-row-gap: r4k_ms_w * 0.015
+  .contact_ms_05
+    grid-column-start: 1
+    grid-column-end: 4
+    grid-row-start: 1
+    grid-row-end: 2
+  .fb_ms_01
+    display: grid
+    justify-content: center
+    grid-column-start: 1
+    grid-column-end: 2
+    grid-row-start: 2
+    grid-row-end: 3
+  .tw_ms_01
+    display: grid
+    justify-content: center
+    grid-column-start: 2
+    grid-column-end: 3
+    grid-row-start: 2
+    grid-row-end: 3
+  .lk_ms_01
+    display: grid
+    justify-content: center
+    grid-column-start: 3
+    grid-column-end: 4
+    grid-row-start: 2
+    grid-row-end: 3
+  @media screen and (max-width: rFullHD_ms_w)
+  {
+    padding: rFullHD_ms_w * 0.01
+    grid-template-rows: fBFontFullHD_ms icoFullHD_ms_h
+    grid-row-gap: rFullHD_ms_w * 0.01
+  }
+  @media screen and (max-width: rWXGA_ms_w)
+  {
+    padding: rWXGA_ms_w * 0.01
+    grid-template-rows: fBFontWXGA_ms icoWXGA_ms_h
+    grid-row-gap: rWXGA_ms_w * 0.01
+  }
+  @media screen and (max-width: rHDTV_ms_w)
+  {
+    padding: rHDTV_ms_w * 0.01
+    grid-template-rows: fBFontHDTV_ms icoHDTV_ms_h
+    grid-row-gap: rHDTV_ms_w * 0.01
+  }
+  @media screen and (max-width: rNTSC_ms_w)
+  {
+    padding: rNTSC_ms_w * 0.01
+    grid-template-rows: fBFontNTSC_ms icoNTSC_ms_h
+    grid-row-gap: rNTSC_ms_w * 0.01
+  }
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    padding: rTAB_ms_w * 0.01
+    grid-template-rows: fBFontTAB_ms icoTAB_ms_h
+    grid-row-gap: rTAB_ms_w * 0.01
+  }
+.cright_ms_01
+  display: grid
+  align-items: center
+  justify-content: center
+  grid-column-start: 2
+  grid-column-end: 4
+  grid-row-start: 4
+  grid-row-end: 5
+  p
+    margin: 0
+.ico_ms_01
+  width: auto
+  height: ico4k_ms_h
+  @media screen and (max-width: rFullHD_ms_w)
+  {
+    height: icoFullHD_ms_h
+  }
+  @media screen and (max-width: rWXGA_ms_w)
+  {
+    height: icoWXGA_ms_h
+  }
+  @media screen and (max-width: rHDTV_ms_w)
+  {
+    height: icoHDTV_ms_h
+  }
+  @media screen and (max-width: rNTSC_ms_w)
+  {
+    height: icoNTSC_ms_h
+  }
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    height: icoTAB_ms_h
+  }
+.til_ms_01
+  margin: 0
+  font-size: fBFont4k_ms
+  font-weight: bold
+  color: gray
+
+  @media screen and (max-width: rFullHD_ms_w)
+  {
+    font-size: fBFontFullHD_ms
+  }
+  @media screen and (max-width: rWXGA_ms_w)
+  {
+    font-size: fBFontWXGA_ms
+  }
+  @media screen and (max-width: rHDTV_ms_w)
+  {
+    font-size: fBFontHDTV_ms
+  }
+  @media screen and (max-width: rNTSC_ms_w)
+  {
+    font-size: fBFontNTSC_ms
+  }
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    font-size: fBFontTAB_ms
+  }
+.txt_ms_01
+  margin: 0
+  font-size: fFont4k_ms
+  color: gray
+  text-decoration: none
+
+  @media screen and (max-width: rFullHD_ms_w)
+  {
+    font-size: fBFontFullHD_ms
+  }
+  @media screen and (max-width: rWXGA_ms_w)
+  {
+    font-size: fBFontWXGA_ms
+  }
+  @media screen and (max-width: rHDTV_ms_w)
+  {
+    font-size: fBFontHDTV_ms
+  }
+  @media screen and (max-width: rNTSC_ms_w)
+  {
+    font-size: fBFontNTSC_ms
+  }
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    font-size: fBFontTAB_ms
+  }

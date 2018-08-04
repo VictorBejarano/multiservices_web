@@ -1,0 +1,111 @@
+.contact_us
+  padding 1vw
+  // background-color yellow
+  font-size Ffont_ms
+  width 100%
+  height 100vh
+  background-clip content-box
+  grid-row-start 4
+  grid-row-start 5
+  display grid
+  justify-content center
+  align-content center
+  grid-gap: 2vmin
+  grid-template-columns 58vmin 43vmin
+  grid-template-rows auto auto auto
+  @media screen and (max-aspect-ratio: 722/662)
+  {
+    grid-gap: 2vmin * FactorFfontP
+    font-size FfontP_ms
+    // background-color blue
+    grid-template-columns auto
+    grid-template-rows auto auto auto auto auto
+  }
+.contact_ms_01,.dir_ms_01,.hor_ms_01,.sig_ms_01
+  padding 2vmin
+  display grid
+  grid-gap 1vmin
+  align-content center
+  @media screen and (max-aspect-ratio: 722/662)
+  {
+    padding 2vmin * FactorFfontP
+    grid-gap 1vmin * FactorFfontP
+  }
+.til_ms_01,.txt_ms_01
+  margin 0
+  color gray
+  text-decoration: none
+.til_ms_01
+  font-weight: bold
+  font-size FfontBold_ms
+  @media screen and (max-aspect-ratio: 722/662)
+  {
+    font-size FfontBoldP_ms
+  }
+.contact_ms_01
+  grid-template-rows (FfontBold_ms * FactorFfont) (Ffont_ms * FactorFfont) (Ffont_ms * FactorFfont) (Ffont_ms * FactorFfont)
+  @media screen and (max-aspect-ratio: 722/662)
+  {
+    grid-template-rows (FfontBoldP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontP_ms * FactorFfont)
+    grid-row-start 1
+    grid-row-end 2
+  }
+.dir_ms_01
+  grid-template-columns auto auto
+  grid-template-rows (FfontBold_ms * FactorFfont) (Ffont_ms * FactorFfont) (FfontBold_ms * FactorFfont) Tico_ms
+  .contact_ms_03
+    grid-column-start 1
+    grid-column-end 3
+  .dir_ms_02
+    grid-column-start 1
+    grid-column-end 3
+  .contact_ms_04
+    grid-column-start 1
+    grid-column-end 3
+  @media screen and (max-aspect-ratio: 722/662)
+  {
+    grid-template-rows (FfontBoldP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontBoldP_ms * FactorFfont) TicoP_ms
+    grid-row-start 2
+    grid-row-end 3
+  }
+.hor_ms_01
+  grid-template-rows (FfontBold_ms * FactorFfont) (Ffont_ms * FactorFfont) (Ffont_ms * FactorFfont)
+  @media screen and (max-aspect-ratio: 722/662)
+  {
+    grid-template-rows (FfontBoldP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontP_ms * FactorFfont)
+    grid-row-start 3
+    grid-row-end 4
+  }
+.sig_ms_01
+  grid-template-columns auto auto auto
+  grid-template-rows (FfontBold_ms * FactorFfont) Tico_ms
+  .contact_ms_05
+    grid-column-start 1
+    grid-column-end 4
+  @media screen and (max-aspect-ratio: 722/662)
+  {
+    grid-template-rows (FfontBoldP_ms * FactorFfont) TicoP_ms
+    grid-row-start 4
+    grid-row-end 5
+  }
+.cright_ms_01
+  grid-column-start 1
+  grid-column-end 3
+  display grid
+  justify-content center
+  @media screen and (max-aspect-ratio: 722/662)
+  {
+    grid-column-start 1
+    grid-column-end 2
+    grid-row-start 5
+    grid-row-end 6
+  }
+.ico_ms_01
+  height Tico_ms
+  @media screen and (max-aspect-ratio: 722/662)
+  {
+    height TicoP_ms
+  }
+.gmap_ms_01,.wz_ms_01,.fb_ms_01,.tw_ms_01,.lk_ms_01
+  display grid
+  justify-content center
