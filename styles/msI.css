@@ -12,10 +12,22 @@
   grid-template-columns: 20vw 80vw;
   grid-template-rows: auto;
 }
+@media screen and (max-width: 640px) {
+  .menu_ms_01 {
+    height: 10vw;
+    grid-template-columns: auto;
+    grid-template-rows: 6vw 4vw;
+  }
+}
 .menu_ms_01 img {
   width: auto;
   height: 5.833333333333334vw;
   z-index: -1;
+}
+@media screen and (max-width: 640px) {
+  .menu_ms_01 img {
+    height: 6.666666666666667vw;
+  }
 }
 .menu_ms_01 ul {
   margin: 0;
@@ -41,6 +53,20 @@
   text-decoration: none;
   font-size: 1.2vw;
 }
+@media screen and (max-width: 640px) {
+  .menu_ms_01 ul a {
+    font-size: 1.6vw;
+  }
+}
+@media screen and (max-width: 640px) {
+  .menu_ms_01 ul {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-gap: 10vw;
+  }
+}
 .log_ms_01 {
   display: grid;
   position: fixed;
@@ -62,6 +88,16 @@
   align-items: center;
   z-index: -2;
 }
+@media screen and (max-width: 640px) {
+  .log_ms_01 {
+    padding: 0;
+    left: 0;
+    width: 100%;
+    height: 16vw;
+    background-size: auto 16vw;
+    top: -4.4vw;
+  }
+}
 .rombos_ms_01 {
   position: fixed;
   width: 100%;
@@ -70,6 +106,13 @@
   background-image: url("../images/Rombos.png");
   background-size: auto 13vw;
   z-index: -3;
+}
+@media screen and (max-width: 640px) {
+  .rombos_ms_01 {
+    height: 18vw;
+    top: -7vw;
+    background-size: auto 18vw;
+  }
 }
 .contact_us {
   padding: 1vw;
@@ -83,18 +126,23 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
   grid-gap: 2vmin;
   grid-template-columns: 58vmin 43vmin;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto 32vmin 22vmin 10vmin auto;
 }
 @media screen and (max-aspect-ratio: 722/662) {
   .contact_us {
-    grid-gap: 1.4vmin;
-    font-size: 2.1vmin;
+    grid-gap: 1.5vmin;
+    font-size: 2.25vmin;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto 20vmin 24vmin 16vmin 14vmin 8vmin auto;
+  }
+}
+@media screen and (max-aspect-ratio: 500/662) {
+  .contact_us {
+    grid-gap: 2.6vmin;
+    font-size: 2.925vmin;
+    grid-template-rows: auto 27vmin 32vmin 23vmin 20vmin 6vmin auto;
   }
 }
 .contact_ms_01,
@@ -112,8 +160,17 @@
   .dir_ms_01,
   .hor_ms_01,
   .sig_ms_01 {
-    padding: 1.4vmin;
-    grid-gap: 0.7vmin;
+    padding: 1.5vmin;
+    grid-gap: 0.75vmin;
+  }
+}
+@media screen and (max-aspect-ratio: 500/662) {
+  .contact_ms_01,
+  .dir_ms_01,
+  .hor_ms_01,
+  .sig_ms_01 {
+    padding: 2.6vmin;
+    grid-gap: 1.3vmin;
   }
 }
 .til_ms_01,
@@ -128,22 +185,42 @@
 }
 @media screen and (max-aspect-ratio: 722/662) {
   .til_ms_01 {
-    font-size: 3.15vmin;
+    font-size: 3.375vmin;
+  }
+}
+@media screen and (max-aspect-ratio: 500/662) {
+  .til_ms_01 {
+    font-size: 4.3875vmin;
   }
 }
 .contact_ms_01 {
   grid-template-rows: 6.3vmin 4.199999999999999vmin 4.199999999999999vmin 4.199999999999999vmin;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 @media screen and (max-aspect-ratio: 722/662) {
   .contact_ms_01 {
-    grid-template-rows: 4.409999999999999vmin 2.94vmin 2.94vmin 2.94vmin;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-template-rows: 4.725vmin 3.15vmin 3.15vmin 3.15vmin;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+@media screen and (max-aspect-ratio: 500/662) {
+  .contact_ms_01 {
+    grid-template-rows: 6.1425vmin 4.095vmin 4.095vmin 4.095vmin;
   }
 }
 .dir_ms_01 {
   grid-template-columns: auto auto;
   grid-template-rows: 6.3vmin 4.199999999999999vmin 6.3vmin 8vmin;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 .dir_ms_01 .contact_ms_03 {
   grid-column-start: 1;
@@ -159,24 +236,46 @@
 }
 @media screen and (max-aspect-ratio: 722/662) {
   .dir_ms_01 {
-    grid-template-rows: 4.409999999999999vmin 2.94vmin 4.409999999999999vmin 5.6vmin;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-template-rows: 4.725vmin 3.15vmin 4.725vmin 6vmin;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
+@media screen and (max-aspect-ratio: 500/662) {
+  .dir_ms_01 {
+    grid-template-rows: 6.1425vmin 4.095vmin 6.1425vmin 7.800000000000001vmin;
   }
 }
 .hor_ms_01 {
   grid-template-rows: 6.3vmin 4.199999999999999vmin 4.199999999999999vmin;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 @media screen and (max-aspect-ratio: 722/662) {
   .hor_ms_01 {
-    grid-template-rows: 4.409999999999999vmin 2.94vmin 2.94vmin;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-template-rows: 4.725vmin 3.15vmin 3.15vmin;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+}
+@media screen and (max-aspect-ratio: 500/662) {
+  .hor_ms_01 {
+    grid-template-rows: 6.1425vmin 4.095vmin 4.095vmin;
   }
 }
 .sig_ms_01 {
   grid-template-columns: auto auto auto;
   grid-template-rows: 6.3vmin 8vmin;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 .sig_ms_01 .contact_ms_05 {
   grid-column-start: 1;
@@ -184,25 +283,36 @@
 }
 @media screen and (max-aspect-ratio: 722/662) {
   .sig_ms_01 {
-    grid-template-rows: 4.409999999999999vmin 5.6vmin;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-template-rows: 4.725vmin 6vmin;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+}
+@media screen and (max-aspect-ratio: 500/662) {
+  .sig_ms_01 {
+    grid-template-rows: 6.1425vmin 7.800000000000001vmin;
   }
 }
 .cright_ms_01 {
   grid-column-start: 1;
   grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
   display: grid;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 @media screen and (max-aspect-ratio: 722/662) {
   .cright_ms_01 {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 7;
   }
 }
 .ico_ms_01 {
@@ -210,7 +320,12 @@
 }
 @media screen and (max-aspect-ratio: 722/662) {
   .ico_ms_01 {
-    height: 5.6vmin;
+    height: 6vmin;
+  }
+}
+@media screen and (max-aspect-ratio: 500/662) {
+  .ico_ms_01 {
+    height: 7.800000000000001vmin;
   }
 }
 .gmap_ms_01,

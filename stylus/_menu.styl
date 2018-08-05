@@ -10,10 +10,20 @@
   display: grid
   grid-template-columns: logo_ms menu_ms
   grid-template-rows: auto
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    height: 10vw
+    grid-template-columns: auto
+    grid-template-rows: 6vw 4vw
+  }
   img
     width: auto
     height: log_ms_h
     z-index: -1
+    @media screen and (max-width: rTAB_ms_w)
+    {
+      height: logTAB_ms_h
+    }
   ul
     margin 0
     padding: 0
@@ -31,6 +41,18 @@
       color white
       text-decoration: none
       font-size: Mfont_ms
+      @media screen and (max-width: rTAB_ms_w)
+      {
+        font-size: 1.6vw
+      }
+    @media screen and (max-width: rTAB_ms_w)
+    {
+      grid-column-start: 1
+      grid-column-end: 2
+      grid-row-start: 2
+      grid-row-end: 3
+      grid-gap: 10vw
+    }
 .log_ms_01
   display: grid
   position: fixed
@@ -47,6 +69,15 @@
   justify-content: center
   align-items: center
   z-index: -2
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    padding: 0
+    left: 0
+    width: 100%
+    height: romlogTAB_ms_h
+    background-size: auto romlogTAB_ms_h
+    top: -4.4vw
+  }
 .rombos_ms_01
   position: fixed
   width: 100%
@@ -55,3 +86,10 @@
   background-image: url('../images/Rombos.png')
   background-size: auto rombos_ms_h
   z-index: -3
+  @media screen and (max-width: rTAB_ms_w)
+  {
+    height: rombosTAB_ms_h
+    top: rombosTAB_ms_t
+    background-size: auto rombosTAB_ms_h
+  }
+// .menu_ms_02
