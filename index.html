@@ -5,7 +5,7 @@
     <title>Multiservices INFAS</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="styles/msI.css"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
     <!-- , initial-scale=1.0,maximum-scale=1.0,user-scalable=0 -->
   </head>
   <body>
@@ -81,6 +81,19 @@
       </section>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB4y2uqLeAZQV1lFQ8v5sOYKlNq5Spnlxk",
+        authDomain: "prueba-f8696.firebaseapp.com",
+        databaseURL: "https://prueba-f8696.firebaseio.com",
+        projectId: "prueba-f8696",
+        storageBucket: "prueba-f8696.appspot.com",
+        messagingSenderId: "604933690122"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script type="text/javascript">
       var consulta = window.matchMedia('(max-width:640px)');
       consulta.addListener(mediaQuery);
