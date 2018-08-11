@@ -1,173 +1,347 @@
 .contact_us
-  padding 1vw
-  background-color yellow
-  font-size Ffont_ms
+  margin 10px 0
+  background-color white
+  padding 5%
+  border-radius 25px
+  // border 5px dashed gray
   width 100%
-  height 100vh
-  background-clip content-box
-  grid-row-start 4
-  grid-row-start 5
-  display grid
+  height: auto
   justify-content center
-  // align-content center
-  grid-gap: 2vmin
-  grid-template-columns 58vmin 43vmin
-  grid-template-rows auto 32vmin 22vmin 10vmin auto
-  @media screen and (max-aspect-ratio: 722/662)
-  {
-    grid-gap: 2vmin * FactorFfontP
-    font-size FfontP_ms
-    // background-color blue
-    grid-template-columns auto
-    grid-template-rows auto 20vmin 24vmin 16vmin 14vmin 8vmin auto
-  }
-  @media screen and (max-aspect-ratio: 500/662)
-  {
-    grid-gap: 2vmin * FactorFfontP2
-    font-size FfontP2_ms
-    grid-template-rows auto 27vmin 32vmin 23vmin 20vmin 6vmin auto
-  }
-.contact_ms_01,.dir_ms_01,.hor_ms_01,.sig_ms_01
-  padding 2vmin
+  align-items center
+  // background-clip content-box
   display grid
-  grid-gap 1vmin
-  align-content center
-  @media screen and (max-aspect-ratio: 722/662)
-  {
-    padding 2vmin * FactorFfontP
-    grid-gap 1vmin * FactorFfontP
+  grid-gap 15px
+  grid-template-columns auto auto auto auto
+  grid-template-rows auto auto auto
+  z-index 1
+  @media screen and (max-width: 1140px){
+    grid-template-columns auto auto
+    grid-template-rows auto auto auto auto
   }
-  @media screen and (max-aspect-ratio: 500/662)
-  {
-    padding 2vmin * FactorFfontP2
-    grid-gap 1vmin * FactorFfontP2
+  @media screen and (max-width: 620px){
+    grid-template-columns auto
+    grid-template-rows auto auto auto auto auto auto
   }
 .til_ms_01,.txt_ms_01
   margin 0
   color gray
-  text-decoration: none
+  text-decoration none
 .til_ms_01
-  font-weight: bold
-  font-size FfontBold_ms
-  @media screen and (max-aspect-ratio: 722/662)
-  {
-    font-size FfontBoldP_ms
-  }
-  @media screen and (max-aspect-ratio: 500/662)
-  {
-    font-size FfontBoldP2_ms
-  }
+  font-size 1.4em
+  font-weight bold
+.ico_ms_01
+  width FootIco
 .contact_ms_01
-  grid-template-rows (FfontBold_ms * FactorFfont) (Ffont_ms * FactorFfont) (Ffont_ms * FactorFfont) (Ffont_ms * FactorFfont)
   grid-column-start 1
   grid-column-end 2
-  grid-row-start 2
+  grid-row-start 1
   grid-row-end 3
-  @media screen and (max-aspect-ratio: 722/662)
-  {
-    grid-template-rows (FfontBoldP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontP_ms * FactorFfont)
+  display grid
+  grid-gap 5px
+  @media screen and (max-width: 620px){
+    grid-column-start 1
+    grid-column-end 2
+    grid-row-start 1
+    grid-row-end 2
+  }
+.dir_ms_01
+  grid-column-start 2
+  grid-column-end 3
+  grid-row-start 1
+  grid-row-end 2
+  display grid
+  grid-template-rows auto auto
+  grid-gap 5px
+  @media screen and (max-width: 620px){
     grid-column-start 1
     grid-column-end 2
     grid-row-start 2
     grid-row-end 3
   }
-  @media screen and (max-aspect-ratio: 500/662)
-  {
-    grid-template-rows (FfontBoldP2_ms * FactorFfont) (FfontP2_ms * FactorFfont) (FfontP2_ms * FactorFfont) (FfontP2_ms * FactorFfont)
-  }
-.dir_ms_01
-  grid-template-columns auto auto
-  grid-template-rows (FfontBold_ms * FactorFfont) (Ffont_ms * FactorFfont) (FfontBold_ms * FactorFfont) Tico_ms
+.how_ms_01
   grid-column-start 2
   grid-column-end 3
   grid-row-start 2
   grid-row-end 3
-  .contact_ms_03
-    grid-column-start 1
-    grid-column-end 3
-  .dir_ms_02
-    grid-column-start 1
-    grid-column-end 3
-  .contact_ms_04
-    grid-column-start 1
-    grid-column-end 3
-  @media screen and (max-aspect-ratio: 722/662)
-  {
-    grid-template-rows (FfontBoldP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontBoldP_ms * FactorFfont) TicoP_ms
+  display grid
+  grid-row-gap 5px
+  grid-template-columns auto auto
+  grid-template-rows auto FootIco
+  @media screen and (max-width: 620px){
     grid-column-start 1
     grid-column-end 2
     grid-row-start 3
     grid-row-end 4
   }
-  @media screen and (max-aspect-ratio: 500/662)
-  {
-    grid-template-rows (FfontBoldP2_ms * FactorFfont) (FfontP2_ms * FactorFfont) (FfontBoldP2_ms * FactorFfont) TicoP2_ms
-  }
+  .contact_ms_04
+    grid-column-start 1
+    grid-column-end 3
+    grid-row-start 1
+    grid-row-end 2
+  .gmap_ms_01
+    grid-column-start 1
+    grid-column-end 2
+    grid-row-start 2
+    grid-row-end 3
+  .wz_ms_01
+    grid-column-start 2
+    grid-column-end 3
+    grid-row-start 2
+    grid-row-end 3
 .hor_ms_01
-  grid-template-rows (FfontBold_ms * FactorFfont) (Ffont_ms * FactorFfont) (Ffont_ms * FactorFfont)
-  grid-column-start 1
-  grid-column-end 2
-  grid-row-start 3
-  grid-row-end 4
-  @media screen and (max-aspect-ratio: 722/662)
-  {
-    grid-template-rows (FfontBoldP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontP_ms * FactorFfont)
+  grid-column-start 3
+  grid-column-end 4
+  grid-row-start 1
+  grid-row-end 3
+  display grid
+  grid-gap 5px
+  @media screen and (max-width: 1140px){
+    grid-column-start 1
+    grid-column-end 2
+    grid-row-start 3
+    grid-row-end 4
+  }
+  @media screen and (max-width: 620px){
     grid-column-start 1
     grid-column-end 2
     grid-row-start 4
     grid-row-end 5
   }
-  @media screen and (max-aspect-ratio: 500/662)
-  {
-    grid-template-rows (FfontBoldP2_ms * FactorFfont) (FfontP2_ms * FactorFfont) (FfontP2_ms * FactorFfont)
-  }
 .sig_ms_01
+  grid-column-start 4
+  grid-column-end 5
+  grid-row-start 1
+  grid-row-end 3
+  display grid
+  grid-row-gap 5px
   grid-template-columns auto auto auto
-  grid-template-rows (FfontBold_ms * FactorFfont) Tico_ms
-  grid-column-start 2
-  grid-column-end 3
-  grid-row-start 3
-  grid-row-end 4
-  .contact_ms_05
-    grid-column-start 1
-    grid-column-end 4
-  @media screen and (max-aspect-ratio: 722/662)
-  {
-    grid-template-rows (FfontBoldP_ms * FactorFfont) TicoP_ms
+  grid-template-rows auto FootIco
+  @media screen and (max-width: 1140px){
+    grid-column-start 2
+    grid-column-end 3
+    grid-row-start 3
+    grid-row-end 4
+    grid-template-rows auto auto
+  }
+  @media screen and (max-width: 620px){
     grid-column-start 1
     grid-column-end 2
     grid-row-start 5
     grid-row-end 6
   }
-  @media screen and (max-aspect-ratio: 500/662)
-  {
-    grid-template-rows (FfontBoldP2_ms * FactorFfont) TicoP2_ms
-  }
+  a
+    width FootIco * 1.2
+  .contact_ms_05
+    grid-column-start 1
+    grid-column-end 4
+    grid-row-start 1
+    grid-row-end 2
+  .fb_ms_01
+    grid-column-start 1
+    grid-column-end 2
+    grid-row-start 2
+    grid-row-end 3
+  .tw_ms_01
+    grid-column-start 2
+    grid-column-end 3
+    grid-row-start 2
+    grid-row-end 3
+  .lk_ms_01
+    grid-column-start 3
+    grid-column-end 4
+    grid-row-start 2
+    grid-row-end 3
 .cright_ms_01
   grid-column-start 1
-  grid-column-end 3
-  grid-row-start 4
-  grid-row-end 5
+  grid-column-end 5
+  grid-row-start 3
+  grid-row-end 4
   display grid
-  justify-content center
-  align-content center
-  @media screen and (max-aspect-ratio: 722/662)
-  {
+  @media screen and (max-width: 1140px){
+    grid-column-start 1
+    grid-column-end 3
+    grid-row-start 4
+    grid-row-end 5
+  }
+  @media screen and (max-width: 620px){
     grid-column-start 1
     grid-column-end 2
     grid-row-start 6
     grid-row-end 7
   }
-.ico_ms_01
-  height Tico_ms
-  @media screen and (max-aspect-ratio: 722/662)
-  {
-    height TicoP_ms
-  }
-  @media screen and (max-aspect-ratio: 500/662)
-  {
-    height TicoP2_ms
-  }
-.gmap_ms_01,.wz_ms_01,.fb_ms_01,.tw_ms_01,.lk_ms_01
+.contFootIco_ms_01
   display grid
-  justify-content center
+  justify-items center
+// .contact_us
+//   padding 1vw
+//   background-color yellow
+//   font-size Ffont_ms
+//   width 100%
+//   height 100vh
+//   background-clip content-box
+//   grid-row-start 4
+//   grid-row-start 5
+//   display grid
+//   justify-content center
+//   // align-content center
+//   grid-gap: 2vmin
+//   grid-template-columns 58vmin 43vmin
+//   grid-template-rows auto 32vmin 22vmin 10vmin auto
+//   @media screen and (max-aspect-ratio: 722/662)
+//   {
+//     grid-gap: 2vmin * FactorFfontP
+//     font-size FfontP_ms
+//     // background-color blue
+//     grid-template-columns auto
+//     grid-template-rows auto 20vmin 24vmin 16vmin 14vmin 8vmin auto
+//   }
+//   @media screen and (max-aspect-ratio: 500/662)
+//   {
+//     grid-gap: 2vmin * FactorFfontP2
+//     font-size FfontP2_ms
+//     grid-template-rows auto 27vmin 32vmin 23vmin 20vmin 6vmin auto
+//   }
+// .contact_ms_01,.dir_ms_01,.hor_ms_01,.sig_ms_01
+//   padding 2vmin
+//   display grid
+//   grid-gap 1vmin
+//   align-content center
+//   @media screen and (max-aspect-ratio: 722/662)
+//   {
+//     padding 2vmin * FactorFfontP
+//     grid-gap 1vmin * FactorFfontP
+//   }
+//   @media screen and (max-aspect-ratio: 500/662)
+//   {
+//     padding 2vmin * FactorFfontP2
+//     grid-gap 1vmin * FactorFfontP2
+//   }
+// .til_ms_01,.txt_ms_01
+//   margin 0
+//   color gray
+//   text-decoration: none
+// .til_ms_01
+//   font-weight: bold
+//   font-size FfontBold_ms
+//   @media screen and (max-aspect-ratio: 722/662)
+//   {
+//     font-size FfontBoldP_ms
+//   }
+//   @media screen and (max-aspect-ratio: 500/662)
+//   {
+//     font-size FfontBoldP2_ms
+//   }
+// .contact_ms_01
+//   grid-template-rows (FfontBold_ms * FactorFfont) (Ffont_ms * FactorFfont) (Ffont_ms * FactorFfont) (Ffont_ms * FactorFfont)
+//   grid-column-start 1
+//   grid-column-end 2
+//   grid-row-start 2
+//   grid-row-end 3
+//   @media screen and (max-aspect-ratio: 722/662)
+//   {
+//     grid-template-rows (FfontBoldP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontP_ms * FactorFfont)
+//     grid-column-start 1
+//     grid-column-end 2
+//     grid-row-start 2
+//     grid-row-end 3
+//   }
+//   @media screen and (max-aspect-ratio: 500/662)
+//   {
+//     grid-template-rows (FfontBoldP2_ms * FactorFfont) (FfontP2_ms * FactorFfont) (FfontP2_ms * FactorFfont) (FfontP2_ms * FactorFfont)
+//   }
+// .dir_ms_01
+//   grid-template-columns auto auto
+//   grid-template-rows (FfontBold_ms * FactorFfont) (Ffont_ms * FactorFfont) (FfontBold_ms * FactorFfont) Tico_ms
+//   grid-column-start 2
+//   grid-column-end 3
+//   grid-row-start 2
+//   grid-row-end 3
+//   .contact_ms_03
+//     grid-column-start 1
+//     grid-column-end 3
+//   .dir_ms_02
+//     grid-column-start 1
+//     grid-column-end 3
+//   .contact_ms_04
+//     grid-column-start 1
+//     grid-column-end 3
+//   @media screen and (max-aspect-ratio: 722/662)
+//   {
+//     grid-template-rows (FfontBoldP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontBoldP_ms * FactorFfont) TicoP_ms
+//     grid-column-start 1
+//     grid-column-end 2
+//     grid-row-start 3
+//     grid-row-end 4
+//   }
+//   @media screen and (max-aspect-ratio: 500/662)
+//   {
+//     grid-template-rows (FfontBoldP2_ms * FactorFfont) (FfontP2_ms * FactorFfont) (FfontBoldP2_ms * FactorFfont) TicoP2_ms
+//   }
+// .hor_ms_01
+//   grid-template-rows (FfontBold_ms * FactorFfont) (Ffont_ms * FactorFfont) (Ffont_ms * FactorFfont)
+//   grid-column-start 1
+//   grid-column-end 2
+//   grid-row-start 3
+//   grid-row-end 4
+//   @media screen and (max-aspect-ratio: 722/662)
+//   {
+//     grid-template-rows (FfontBoldP_ms * FactorFfont) (FfontP_ms * FactorFfont) (FfontP_ms * FactorFfont)
+//     grid-column-start 1
+//     grid-column-end 2
+//     grid-row-start 4
+//     grid-row-end 5
+//   }
+//   @media screen and (max-aspect-ratio: 500/662)
+//   {
+//     grid-template-rows (FfontBoldP2_ms * FactorFfont) (FfontP2_ms * FactorFfont) (FfontP2_ms * FactorFfont)
+//   }
+// .sig_ms_01
+//   grid-template-columns auto auto auto
+//   grid-template-rows (FfontBold_ms * FactorFfont) Tico_ms
+//   grid-column-start 2
+//   grid-column-end 3
+//   grid-row-start 3
+//   grid-row-end 4
+//   .contact_ms_05
+//     grid-column-start 1
+//     grid-column-end 4
+//   @media screen and (max-aspect-ratio: 722/662)
+//   {
+//     grid-template-rows (FfontBoldP_ms * FactorFfont) TicoP_ms
+//     grid-column-start 1
+//     grid-column-end 2
+//     grid-row-start 5
+//     grid-row-end 6
+//   }
+//   @media screen and (max-aspect-ratio: 500/662)
+//   {
+//     grid-template-rows (FfontBoldP2_ms * FactorFfont) TicoP2_ms
+//   }
+// .cright_ms_01
+//   grid-column-start 1
+//   grid-column-end 3
+//   grid-row-start 4
+//   grid-row-end 5
+//   display grid
+//   justify-content center
+//   align-content center
+//   @media screen and (max-aspect-ratio: 722/662)
+//   {
+//     grid-column-start 1
+//     grid-column-end 2
+//     grid-row-start 6
+//     grid-row-end 7
+//   }
+// .ico_ms_01
+//   height Tico_ms
+//   @media screen and (max-aspect-ratio: 722/662)
+//   {
+//     height TicoP_ms
+//   }
+//   @media screen and (max-aspect-ratio: 500/662)
+//   {
+//     height TicoP2_ms
+//   }
+// .gmap_ms_01,.wz_ms_01,.fb_ms_01,.tw_ms_01,.lk_ms_01
+//   display grid
+//   justify-content center

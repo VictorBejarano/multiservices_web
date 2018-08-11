@@ -1,173 +1,337 @@
 .bmenu_ms_01
-  display: none
-  @media screen and (max-width: rSM_ms_w)
-  {
-    border 0.03vw solid red
-    background-color blue
-    display block
-    z-index 9999
+  background-color rgb(100,100,100)
+  position fixed
+  width 3em
+  height 3em
+  top 1em
+  left 1em
+  border-radius 50%
+  justify-content center
+  align-content center
+  z-index 4
+  display none
+  @media screen and (max-width: 760px){
+    display grid
   }
-.menu_ms_01
-  width: 100%
-  position: fixed
-  height: 4vw
-  top: 0
-  background-color: rgba(0.3,0.3,0.3,0.8)
-  margin: 0
-  display: grid
-  grid-template-columns: logo_ms menu_ms
-  grid-template-rows: auto
-  @media screen and (max-width: rTAB_ms_w)
-  {
-    height: 10vw
-    grid-template-columns: auto
-    grid-template-rows: 6vw 4vw
+  @media screen and (max-width: 400px){
+    width ((bottom_ms * 3) / 2)
+    height ((bottom_ms * 3) / 2)
+    top (bottom_ms / 2)
+    left (bottom_ms / 2)
   }
   img
-    width: auto
-    height: log_ms_h
-    z-index: -1
-    @media screen and (max-width: rTAB_ms_w)
-    {
-      height: logTAB_ms_h
+    width 2em
+    @media screen and (max-width: 400px){
+      width bottom_ms
     }
-    @media screen and (max-width: rSM_ms_w)
-    {
-      height: logSM_ms_h
-    }
+.barra_ms_01
+  position fixed
+  background-color rgba(0.3,0.3,0.3,0.8)
+  width 100%
+  height 4em
+  z-index 2
+  @media screen and (max-width: 840px){
+    height (MenuRomH_ms * 0.7) - 1.5em
+  }
+  @media screen and (max-width: 760px){
+    height 4.5em
+    z-index: 2
+  }
+  @media screen and (max-width: 400px){
+    height 3em
+  }
+.menu_ms_01
+  margin 0
+  width 100%
+  display grid
+  grid-template-columns (MenuRomW_ms * 1.5)  auto
+  position fixed
+  top -3.5em
+  justify-content center
+  justify-items center
+  z-index 4
+  @media screen and (max-width: 1000px){
+    grid-template-columns (MenuRomW_ms * 1)  auto
+  }
+  @media screen and (max-width: 840px){
+    top -4em
+    grid-template-columns auto
+    grid-template-rows (MenuRomH_ms * 0.7) auto
+  }
+  @media screen and (max-width: 760px){
+    z-index 3
+  }
+  @media screen and (max-width: 400px){
+    top -2.6em
+  }
   ul
+    grid-column-start 2
+    grid-column-end 3
     margin 0
-    padding: 0
-    grid-column-start: 2
-    grid-column-end: 3
-    display: grid
-    grid-template-columns: auto auto auto auto
-    grid-template-rows: auto
-    grid-gap: 1vw
-    justify-content: center
-    align-items: center
-    li
-      display: grid
-      @media screen and (max-width: rSM_ms_w)
-      {
-        justify-content center
-      }
-    a
-      color white
-      text-decoration: none
-      font-size: Mfont_ms
-      @media screen and (max-width: rTAB_ms_w)
-      {
-        font-size: MfontTAB_ms
-      }
-      @media screen and (max-width: rSM_ms_w) and (orientation: portrait)
-      {
-        font-size: MfontSM_ms * 2
-      }
-      @media screen and (max-width: rSM_ms_w) and (orientation: landscape)
-      {
-        font-size: MfontSM_ms
-      }
-      @media screen and (max-width: rSM_ms_w) and (min-aspect-ratio: 840/662)
-      {
-        font-size: MfontSM_ms * 1.3
-      }
-
-    @media screen and (max-width: rTAB_ms_w)
-    {
-      grid-column-start: 1
-      grid-column-end: 2
-      grid-row-start: 2
-      grid-row-end: 3
-      grid-gap: 10vw
+    padding 0 3em
+    padding-bottom 2.3em
+    display grid
+    grid-gap 2em
+    grid-template-columns auto auto auto auto
+    justify-content center
+    align-content center
+    z-index 3
+    @media screen and (max-width: 1000px){
+      padding 0 2em
+      padding-bottom 2.3em
     }
-    @media screen and (max-width: rSM_ms_w) and (orientation: portrait)
-    {
-      padding-top 12vw
+    @media screen and (max-width: 840px){
+      grid-column-start 1
+      grid-column-end 2
+      grid-row-start 2
+      grid-row-start 3
+      padding-bottom 1em
+      grid-gap 3.2em
+    }
+    @media screen and (max-width: 760px){
+      background-color: rgb(53,53,53)
       grid-template-columns auto
       grid-template-rows auto auto auto auto
-      align-content center
-      grid-gap: 10vh
-      z-index -3
-      top -110vh
+      justify-items center
+      padding 0
+      padding-top: 6em
+      z-index: 1
+      grid-gap 10vh
     }
-    @media screen and (max-width: rSM_ms_w) and (orientation: landscape)
-    {
-      padding-top 12vw
-      grid-template-columns auto auto auto auto
-      grid-template-rows auto
-      align-content center
-      grid-gap: 5vw
-      z-index -3
-      top -110vh
-    }
+    li
+      display grid
+    a
+      color white
+      text-decoration none
+      font-size MenuFont_ms
+      @media screen and (max-width: 760px){
+        font-size MenuFontSM_ms
+      }
+.menu_ms_02
+  &.active
+    top 0
+  @media screen and (max-width: 760px){
+    position fixed
+    width: 100%
+    height: 100%
+    top -200vh
+    transition: 1000ms
+  }
 
 .log_ms_01
-  display: grid
-  position: fixed
-  margin: 0
-  padding: 0
-  width: romlog_ms_w
-  height: romlog_ms_h
-  top: -3.6vw
-  left: 8vw
-  background-image: url('../images/logo_rombos.png')
-  background-position: center
-  background-size: auto romlog_ms_h
-  background-repeat: no-repeat
-  justify-content: center
-  align-items: center
-  z-index: -2
-  @media screen and (max-width: rTAB_ms_w)
-  {
-    padding: 0
-    left: 0
-    width: 100%
-    height: romlogTAB_ms_h
-    background-size: auto romlogTAB_ms_h
-    top: -4.4vw
+  display grid
+  justify-content center
+  align-content center
+  margin 0
+  padding 0
+  width MenuRomW_ms
+  height MenuRomH_ms
+  background-image url("../images/logo_rombos.png")
+  background-position center
+  background-size auto MenuRomGrande_ms
+  background-repeat no-repeat
+  z-index: 1
+  img
+    @media screen and (max-width: 400px){
+      width Logo_ms
+      height auto
+    }
+  @media screen and (max-width: 840px){
+    grid-row-start 1
+    grid-row-end 2
   }
-  @media screen and (max-width: rSM_ms_w)
-  {
-    padding: 0
-    left: 0
-    width: 100%
-    height: romlogSM_ms_h
-    background-size: auto romlogSM_ms_h
-    top: -8vw
+  @media screen and (max-width: 760px){
+    z-index: 3
+  }
+  @media screen and (max-width: 400px){
+    width MenuRomMiniW_ms
+    height MenuRomMiniH_ms
+    background-size auto MenuRomMiniGrande_ms
   }
 .rombos_ms_01
-  position: fixed
-  width: 100%
-  height: rombos_ms_h
-  top: rombos_ms_t
-  background-image: url('../images/Rombos.png')
-  background-size: auto rombos_ms_h
-  z-index: -3
-  @media screen and (max-width: rTAB_ms_w)
-  {
-    height: rombosTAB_ms_h
-    top: rombosTAB_ms_t
-    background-size: auto rombosTAB_ms_h
+  position fixed
+  width 100%
+  height MenuRombos_ms
+  top -3.8em
+  background-image url("../images/Rombos.png")
+  background-size auto 100%
+  background-position center
+  z-index 0
+  @media screen and (max-width: 760px){
+    z-index 2
   }
-  @media screen and (max-width: rSM_ms_w)
-  {
-    height: rombosSM_ms_h
-    top: rombosSM_ms_t
-    background-size: auto rombosSM_ms_h
-  }
-.menu_ms_02
-  @media screen and (max-width: rSM_ms_w)
-  {
-    background-color rgb(3,3,3,0.8)
-    position fixed
-    width 100%
-    height 100%
-    transition 1000ms
-  }
-  &.active
-    @media screen and (max-width: rSM_ms_w)
-    {
-      background-color rgb(53,53,53)
-      top 0
-    }
+.log_ms_01
+  margin 0
+// .bmenu_ms_01
+//   display: none
+//   @media screen and (max-width: rSM_ms_w)
+//   {
+//     border 0.03vw solid red
+//     background-color blue
+//     display block
+//     z-index 9999
+//   }
+// .menu_ms_01
+//   width: 100%
+//   position: fixed
+//   height: 4vw
+//   top: 0
+//   background-color: rgba(0.3,0.3,0.3,0.8)
+//   margin: 0
+//   display: grid
+//   grid-template-columns: logo_ms menu_ms
+//   grid-template-rows: auto
+//   @media screen and (max-width: rTAB_ms_w)
+//   {
+//     height: 10vw
+//     grid-template-columns: auto
+//     grid-template-rows: 6vw 4vw
+//   }
+//   img
+//     width: auto
+//     height: log_ms_h
+//     z-index: -1
+//     @media screen and (max-width: rTAB_ms_w)
+//     {
+//       height: logTAB_ms_h
+//     }
+//     @media screen and (max-width: rSM_ms_w)
+//     {
+//       height: logSM_ms_h
+//     }
+//   ul
+//     margin 0
+//     padding: 0
+//     grid-column-start: 2
+//     grid-column-end: 3
+//     display: grid
+//     grid-template-columns: auto auto auto auto
+//     grid-template-rows: auto
+//     grid-gap: 1vw
+//     justify-content: center
+//     align-items: center
+//     li
+//       display: grid
+//       @media screen and (max-width: rSM_ms_w)
+//       {
+//         justify-content center
+//       }
+//     a
+//       color white
+//       text-decoration: none
+//       font-size: Mfont_ms
+//       @media screen and (max-width: rTAB_ms_w)
+//       {
+//         font-size: MfontTAB_ms
+//       }
+//       @media screen and (max-width: rSM_ms_w) and (orientation: portrait)
+//       {
+//         font-size: MfontSM_ms * 2
+//       }
+//       @media screen and (max-width: rSM_ms_w) and (orientation: landscape)
+//       {
+//         font-size: MfontSM_ms
+//       }
+//       @media screen and (max-width: rSM_ms_w) and (min-aspect-ratio: 840/662)
+//       {
+//         font-size: MfontSM_ms * 1.3
+//       }
+//
+//     @media screen and (max-width: rTAB_ms_w)
+//     {
+//       grid-column-start: 1
+//       grid-column-end: 2
+//       grid-row-start: 2
+//       grid-row-end: 3
+//       grid-gap: 10vw
+//     }
+//     @media screen and (max-width: rSM_ms_w) and (orientation: portrait)
+//     {
+//       padding-top 12vw
+//       grid-template-columns auto
+//       grid-template-rows auto auto auto auto
+//       align-content center
+//       grid-gap: 10vh
+//       z-index -3
+//       top -110vh
+//     }
+//     @media screen and (max-width: rSM_ms_w) and (orientation: landscape)
+//     {
+//       padding-top 12vw
+//       grid-template-columns auto auto auto auto
+//       grid-template-rows auto
+//       align-content center
+//       grid-gap: 5vw
+//       z-index -3
+//       top -110vh
+//     }
+//
+// .log_ms_01
+//   display: grid
+//   position: fixed
+//   margin: 0
+//   padding: 0
+//   width: romlog_ms_w
+//   height: romlog_ms_h
+//   top: -3.6vw
+//   left: 8vw
+//   background-image: url('../images/logo_rombos.png')
+//   background-position: center
+//   background-size: auto romlog_ms_h
+//   background-repeat: no-repeat
+//   justify-content: center
+//   align-items: center
+//   z-index: -2
+//   @media screen and (max-width: rTAB_ms_w)
+//   {
+//     padding: 0
+//     left: 0
+//     width: 100%
+//     height: romlogTAB_ms_h
+//     background-size: auto romlogTAB_ms_h
+//     top: -4.4vw
+//   }
+//   @media screen and (max-width: rSM_ms_w)
+//   {
+//     padding: 0
+//     left: 0
+//     width: 100%
+//     height: romlogSM_ms_h
+//     background-size: auto romlogSM_ms_h
+//     top: -8vw
+//   }
+// .rombos_ms_01
+//   position: fixed
+//   width: 100%
+//   height: rombos_ms_h
+//   top: rombos_ms_t
+//   background-image: url('../images/Rombos.png')
+//   background-size: auto rombos_ms_h
+//   z-index: -3
+//   @media screen and (max-width: rTAB_ms_w)
+//   {
+//     height: rombosTAB_ms_h
+//     top: rombosTAB_ms_t
+//     background-size: auto rombosTAB_ms_h
+//   }
+//   @media screen and (max-width: rSM_ms_w)
+//   {
+//     height: rombosSM_ms_h
+//     top: rombosSM_ms_t
+//     background-size: auto rombosSM_ms_h
+//   }
+// .menu_ms_02
+//   @media screen and (max-width: rSM_ms_w)
+//   {
+//     background-color rgb(3,3,3,0.8)
+//     position fixed
+//     width 100%
+//     height 100%
+//     transition 1000ms
+//   }
+//   &.active
+//     @media screen and (max-width: rSM_ms_w)
+//     {
+//       background-color rgb(53,53,53)
+//       top 0
+//     }

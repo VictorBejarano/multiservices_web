@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Multiservices INFAS</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles/msI.css"/>
+    <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- , initial-scale=1.0,maximum-scale=1.0,user-scalable=0 -->
+  </head>
+  <body class="device-screen">
+    <span class="bmenu_ms_01" id="bmenu_ms_01">
+      <img src="images/logo_inicio.png" alt="icono_menu">
+    </span>
+    <div class="barra_ms_01" id="barra_ms_01"></div>
+    <nav class="menu_ms_01" id="menu_ms_01">
+      <figure class="log_ms_01">
+        <img src="images/logo_1x.png" width="186" alt="Multiservices Logo"/>
+      </figure>
+      <ul class="menu_ms_02" id="menu_ms_02">
+        <li>
+          <a href="#initsec" id="menuinit"><b>Inicio</b></a>
+        </li>
+        <li>
+          <a href="#prodsec" id="menuprod"><b>Producto y Servicios</b></a>
+        </li>
+        <li>
+          <a href="#empsec" id="menuemp"><b>Nuestra Empresa</b></a>
+        </li>
+        <li>
+          <a href="#contact_us" id="menucontact"><b>Contactenos</b></a>
+        </li>
+      </ul>
+      <div class="rombos_ms_01"></div>
+    </nav>
+    <div class="container_ms" id="container_ms">
+      <main>
+        <section class="initsec" id="initsec">
+          hola
+        </section>
+        <section class="prodsec" id="prodsec">
+          hola
+        </section>
+        <section class="empsec" id="empsec">
+          hola
+        </section>
+      </main>
+      <footer class="contact_us" id="contact_us">
+        <section class="contact_ms_01">
+          <p class="contact_ms_02 til_ms_01">Contáctenos:</p>
+          <a class="tel_ms_01 txt_ms_01" href="tel:5714848929"><strong>Teléfono:</strong> +(57)1 484 8929</a>
+          <a class="mov_ms_01 txt_ms_01" href="tel:573013057845"><strong>Móvil: </strong> +(57)301 305 7845</a>
+          <a class="mail_ms_01 txt_ms_01" href="mailto:multiservices.infas@gmail.com"><strong>E-mail:</strong> multiservices.infas@gmail.com</a>
+        </section>
+        <section class="dir_ms_01">
+          <p class="contact_ms_03 til_ms_01">Dirección:</p>
+          <p class="dir_ms_02 txt_ms_01">Diagonal 57z Sur # 74a - 15</p>
+          <p class="contact_ms_04 til_ms_01">Como Llegar:</p>
+          <a class="gmap_ms_01" href="https://www.google.com/maps/place/Multiservices+INFAS/@4.5941787,-74.175329,17z/data=!3m1!4b1!4m5!3m4!1s0x8e3f9e5677f0f001:0x8ef575d6147e723e!8m2!3d4.5941787!4d-74.1731403">
+            <img class="ico_ms_01" src="images/gmap-icon.png" alt="google maps"/>
+          </a>
+          <a class="wz_ms_01" href="https://waze.com/ul/hd2g60hkg">
+            <img class="ico_ms_01" src="images/wz-icon.png" alt="google maps"/>
+          </a>
+        </section>
+        <section class="hor_ms_01">
+          <p class="contact_ms_06 til_ms_01">Horario de Atención:</p>
+          <p class="bw_ms_01 txt_ms_01"><strong>Lunes a Viernes:</strong> 7:30 a.m a 5:30pm</p>
+          <p class="we_ms_01 txt_ms_01"><strong>Sabados:</strong> 7:30 a.m a 1:30pm</p>
+        </section>
+        <section class="sig_ms_01">
+          <p class="contact_ms_05 til_ms_01">Síguenos:</p>
+          <a class="fb_ms_01" href="#">
+            <img class="ico_ms_01" src="images/fb-icon.png" alt="google maps"/>
+          </a>
+          <a class="tw_ms_01"  href="#">
+            <img class="ico_ms_01" src="images/tw-icon.png" alt="google maps"/>
+          </a>
+          <a class="lk_ms_01" href="#">
+            <img class="ico_ms_01" src="images/lk-icon.png" alt="google maps"/>
+          </a>
+        </section>
+        <section class="cright_ms_01">
+          <p class="txt_ms_01">© 2018 Multiservices INFAS</p>
+        </section>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB4y2uqLeAZQV1lFQ8v5sOYKlNq5Spnlxk",
+        authDomain: "prueba-f8696.firebaseapp.com",
+        databaseURL: "https://prueba-f8696.firebaseio.com",
+        projectId: "prueba-f8696",
+        storageBucket: "prueba-f8696.appspot.com",
+        messagingSenderId: "604933690122"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script type="text/javascript">
+      var isMobile = {
+          Android: function() {
+              return navigator.userAgent.match(/Android/i);
+          },
+          BlackBerry: function() {
+              return navigator.userAgent.match(/BlackBerry/i);
+          },
+          iOS: function() {
+              return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+          },
+          Opera: function() {
+              return navigator.userAgent.match(/Opera Mini/i);
+          },
+          Windows: function() {
+              return navigator.userAgent.match(/IEMobile/i);
+          },
+          any: function() {
+              return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+          }
+      };
+      var reqAnimationFrame = (function () {
+        return window[Hammer.prefixed(window, 'requestAnimationFrame')] || function (callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
+      var consulta = window.matchMedia('(max-width:760px)');
+      consulta.addListener(mediaQuery);
+      var $bmenu_ms_01 = document.getElementById('bmenu_ms_01');
+      var $menuinit = document.getElementById('menuinit');
+      var $menuprod = document.getElementById('menuprod');
+      var $menuemp = document.getElementById('menuemp');
+      var $menucontact = document.getElementById('menucontact');
+      var $menu = document.getElementById('menu_ms_01');
+      var $menu2 = document.getElementById('menu_ms_02');
+      var initScale = 1;
+      var START_X = 0;
+      var START_Y = 0;
+      var ticking = false;
+      var transform;
+      var timer;
+      var $body = document.getElementById('container_ms');
+      var corp = document.getElementById('menu_ms_01');
+      if( isMobile.any() )
+      {
+        // alert('Mobile')
+        var gestos = new Hammer($body);
+        var gestos2 = new Hammer(corp);
+        gestos.get('pinch').set({ enable: true }).recognizeWith(gestos.get('pan'));
+        gestos.get('tap').set({ event: 'doubletap', taps: 2 });
+        // gestos.add(new Hammer.Pinch({ threshold: 0 })).recognizeWith(gestos.get('pan'));
+        // gestos.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
+        gestos.on("panstart panmove panend", onPan);
+        gestos2.on('swipeleft', hideMenu);
+        gestos2.on('swiperight', showMenu);
+        gestos.on('pinchmove pinchstart', ZoomBody);
+        gestos.on('doubletap', ZoomDoubleTap);
+      }
+      function resetElement() {
+        $body.className = 'animate';
+        transform = {
+          translate: { x: START_X, y: START_Y },
+          scale: 1,
+          angle: 0,
+          rx: 0,
+          ry: 0,
+          rz: 0
+        };
+        requestElementUpdate();
+      }
+      function updateElementTransform() {
+        var value = [
+          'translate3d(' + transform.translate.x + 'px, ' + transform.translate.y + 'px, 0)',
+          'scale(' + transform.scale + ', ' + transform.scale + ')'
+        ];
+        value = value.join(" ");
+        $body.style.webkitTransform = value;
+        $body.style.mozTransform = value;
+        $body.style.transform = value;
+        ticking = false;
+      }
+      function requestElementUpdate() {
+        if(!ticking) {
+          reqAnimationFrame(updateElementTransform);
+          ticking = true;
+        }
+      }
+      function toggleMenu(){
+        $menu.classList.toggle('active');
+        $menu2.classList.toggle('active');
+      };
+      function showMenu(){
+        $menu.classList.add('active');
+        $menu2.classList.add('active');
+      };
+      function hideMenu(){
+        $menu.classList.remove('active');
+        $menu2.classList.remove('active');
+      };
+      function mediaQuery() {
+        if(consulta.matches){
+          $bmenu_ms_01.addEventListener('click', toggleMenu);
+        }else{
+          $bmenu_ms_01.removeEventListener('click', toggleMenu);
+        }
+      }
+      function mediaQuery2() {
+        if(consulta.matches){
+          $menuinit.addEventListener('click', toggleMenu);
+        }else{
+          $menuinit.removeEventListener('click', toggleMenu);
+        }
+      }
+      function mediaQuery3() {
+        if(consulta.matches){
+          $menuprod.addEventListener('click', toggleMenu);
+        }else{
+          $menuprod.removeEventListener('click', toggleMenu);
+        }
+      }
+      function mediaQuery4() {
+        if(consulta.matches){
+          $menuemp.addEventListener('click', toggleMenu);
+        }else{
+          $menuemp.removeEventListener('click', toggleMenu);
+        }
+      }
+      function mediaQuery5() {
+        if(consulta.matches){
+          $menucontact.addEventListener('click', toggleMenu);
+        }else{
+          $menucontact.removeEventListener('click', toggleMenu);
+        }
+      }
+      function onPan(ev) {
+        transform.translate = {
+            x: START_X + ev.deltaX,
+            y: START_Y + ev.deltaY
+        };
+        if(transform.translate.x < -((window.screen.availWidth/2)*(transform.scale-1)) ){
+          transform.translate.x = -((window.screen.availWidth/2)*(transform.scale-1));
+        }
+        if(transform.translate.x > ((window.screen.availWidth/2)*(transform.scale-1)) ){
+          transform.translate.x = ((window.screen.availWidth/2)*(transform.scale-1));
+        }
+        // if(transform.translate.y < (($body.offsetHeight/2)*(transform.scale-1)) ){
+        //   transform.translate.y = (($body.offsetHeight/2)*(transform.scale-1));
+        // }
+        // if(transform.translate.y > -(($body.offsetHeight/2)*(transform.scale-1)) ){
+        //   transform.translate.y = -(($body.offsetHeight/2)*(transform.scale-1));
+        // }
+        if(ev.type == 'panend'){
+          START_X = transform.translate.x;
+          START_Y = transform.translate.y;
+
+        }
+
+
+        requestElementUpdate();
+      }
+      function ZoomBody(ev){
+        if(ev.type == 'pinchstart') {
+          initScale = transform.scale || 1;
+        }
+        if(ev.scale <= 1.1){
+          transform.scale = initScale;
+        }
+        else{
+          transform.scale = Math.round(initScale * ev.scale * 100) / 100;
+        }
+        requestElementUpdate();
+      }
+      function ZoomDoubleTap(ev){
+        transform.scale = initScale;
+        requestElementUpdate();
+      }
+      mediaQuery();
+      mediaQuery2();
+      mediaQuery3();
+      mediaQuery4();
+      mediaQuery5();
+      resetElement();
+    </script>
+  </body>
+</html>
